@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body{
+    min-width: 100vh;
+    background-color: #0c1920;
+    font-family: "Poppins", sans-serif;
+
+}
+.bg{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+.buble{
+
+    position: relative;
+    display: flex;
+}
+.buble span{
+    position: relative;
+    min-width: 30px;
+    height: 30px;
+    background-color: #2c738f44;
+    border-radius: 50%;
+    margin: 0 8px;
+    box-shadow:  0 0 0 10px #2c738f44,0 0 50px #05b8ff,0 0 100px #05b8ff;
+    animation: animate 15s linear infinite;
+    animation-duration: calc(72s / var(--i));
+     
+}
+.buble span:nth-child(even){
+    background-color: yellowgreen;
+    box-shadow:  0 0 0 10px #8f2c8c44,0 0 50px #f705ff,0 0 100px #ff9305;
+} 
+@keyframes animate{
+    0%{
+        transform: translateY(100vh) scale(0);
+    }
+
+    100%{
+        
+        transform: translateY(-10vh) scale(1);
+    }
+}
+
+header{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100px;
+    padding: 0 80px;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid orange;
+
+}
+header .logo{
+    display: flex;
+    color: #fff;
+    font-size: 2em;
+    font-weight: 700;
+    text-decoration: none;
+}
+header .logo h1{
+    color: #f705ff;
+}
+header nav{
+    display: flex;
+    gap: 25px;
+}
+
+header nav a{
+    color: #fff;
+    font-size: 1.5em;
+    text-decoration: none;
+
+}
+header nav a.atc,
+header nav a:hover{
+color: #05b8ff;
+}
+
+section{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+section .concet{
+    display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+     text-align: center;
+     max-width: 800px;
+}
+section .concet h1{
+    font-size: 3.5em;
+    color: #fff;
+}
+section .concet p{
+    font-size: 1.5em;
+    color: #79901e;
+}
+section .concet a{
+    text-decoration: none;
+    font-size: 1.5em;
+    color: #1e2790;
+}
+section .concet .bottom{
+    position: relative;
+    top: 100;
+    display: flex;
+    gap: 25px;
+}
+section .concet .bottom a{
+    display: inline-block;
+    padding: 11px 35px;
+    margin-top: 10px;
+    background-color: #ff9305;
+    border-radius: 10px;
+    font-size: 1.5em;
+    font-weight: 500;
+}
+section .concet a:hover{
+    color: #f705ff;
+}
